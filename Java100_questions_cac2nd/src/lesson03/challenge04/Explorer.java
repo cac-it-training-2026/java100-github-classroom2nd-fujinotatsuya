@@ -64,9 +64,26 @@ public class Explorer {
 		int fullLength = 300;
 		int member = 0;
 
-
 		//ここにwhile文を利用した処理を記述
+		while (member < 5) {
 
+			if (fullLength == 300) {
+
+				System.out.println("隊長：");
+				System.out.println((member + 1) + "人目が渡り始めたよ\n");
+				fullLength -= 50;
+
+			} else if (fullLength <= 0) {
+				fullLength += 300;
+				++member;
+			} else {
+				fullLength -= 50;
+				System.out.println("隊長：");
+				System.out.println("まだ渡ってるよ\n");
+
+			}
+
+		}
 
 		System.out.println("全員渡り終わったよ！");
 
